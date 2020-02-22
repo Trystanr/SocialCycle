@@ -1,0 +1,233 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	background-color: #5840ba;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	height: 100vh;
+	width: 100vw;
+
+	overflow: hidden;
+}
+
+@font-face {
+   font-family: 'Mont';
+      src: url('../font/Mont/Mont-Regular.ttf');
+   font-weight: 400;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Mont';
+      src: url('../font/Mont/Mont-Bold.ttf');
+   font-weight: 700;
+   font-style: normal;
+}
+
+select#selSocial {
+  font-family: 'Font Awesome 5 Brands', 'sans-serif';
+}
+
+#btnSearch {
+  font-family: 'Font Awesome 5 Free', 'sans-serif';
+}
+
+#user-pop span{
+	font-family: 'Font Awesome 5 Free', 'sans-serif';
+}
+
+/*			Body 			*/
+
+
+/*			Search			*/
+
+#searchControls {
+	width: 60vw;
+	margin-top: 14vh;
+
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+#searchControls input {
+	color: #fff;
+	background-color: transparent;
+	border:0;
+	outline: 0;
+
+	font-size: 42px;
+
+	font-family: "Mont";
+	font-weight: 400;
+}
+
+#searchControls input::placeholder{
+	color: #6b54c6;
+}
+
+#searchControls #selSocial {
+	outline: 0;
+	border: 0;
+
+	padding: 10px;
+	margin-right: 20px;
+
+	background-color: #614abf;
+    color: #ffffff54;
+
+    font-size: 42px;
+
+    text-align: center;
+
+    border-radius: 8px;
+}
+
+#searchControls #btnSearch {
+	outline: 0;
+	border: 0;
+
+	padding: 10px;
+    margin-left: 20px;
+
+	background-color: transparent;
+    color: #fff;
+
+    font-size: 42px;
+
+    text-align: center;
+
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/*		BG Communications		*/
+
+#bg-comm {
+	position: absolute;
+	top: 30vh;
+	left: 42vw;
+
+	width: 14vw;
+	height: 30vh;
+
+	/*background-color: red;*/
+
+	z-index: -1;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#bg-comm #comm-msg {
+	font-size: 30px;
+
+	font-family: "Mont";
+
+	color: #8c81b9;
+
+	text-align: center;
+}
+
+	#bg-comm #comm-msg {
+		font-size: 30px;
+
+		font-family: "Mont";
+
+		color: #8c81b9;
+
+		text-align: center;
+	}
+
+		#bg-comm #comm-soc {
+			font-family: 'Font Awesome 5 Brands';
+		}
+
+/*			Card Insta			*/
+
+#instaCard {
+	width: 20vw;
+
+	margin-top: 4vh;
+
+	border-radius: 12px;
+	overflow: hidden;
+
+	font-family: "Mont";
+
+	opacity: 100;
+
+	transition: margin-top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+	#instaCard #user-body {
+		background-color: #fff;
+		padding: 20px;
+
+		color: #000;
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	#instaCard #user-footer {
+		background-color: #9078f3;
+		padding: 20px;
+
+		color: #fff;
+	}
+
+		#instaCard h1, #instaCard h2, #instaCard h3, #instaCard p {
+			padding: 0;
+			margin: 0;
+		} 
+
+		#instaCard #user-at {
+			font-size: 12px;
+
+			color: #afafaf;
+			font-weight: 400;
+		}
+
+		#instaCard #user-name {
+			margin: 10px 0 0 0;
+		}
+
+		#instaCard #user-des {
+			margin: 20px 0 0 0;
+
+			text-align: center;
+		}
+
+		#instaCard #user-fol {
+			margin: 20px 0 0 0;
+
+			font-size: 16px;
+		}
+
+		#instaCard #user-fin {
+			margin: 4px 0 0 0;
+			font-size: 16px;
+		}
+
+		#instaCard #user-img {
+			margin-top: 20px;
+			width: 50%;
+
+			align-self: center;
+
+			border-radius: 2000px;
+		}
+
+#instaCard.hideCard {
+	margin-top: 80vh;
+}
