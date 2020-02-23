@@ -22,6 +22,7 @@ $("#txtUsername").on("keyup", function(e) {
 		handleCard(false);
 	} else {
 		$("#btnSearch").click();
+		$("#txtUsername").blur();
 	}
 
 });
@@ -66,40 +67,59 @@ function handleInstagram(usr) {
 		console.log(popularityVal);
 		console.log(popularityRange);
 
-		if (popularityVal < 0) {
-			// Not popular
-			console.log("Least popular");
-		} else  {
+		if (usr[3] > 100) {
+			if (popularityVal < 0) {
+				// Not popular
+				console.log("Least popular");
+			} else  {
 
-			if (popularityRange < 0.2) {
-				// Mr lonely
-				popularityStars += "&#xf005;";
-			} else if (popularityRange < 0.4) {
-				popularityStars += "&#xf005;&#xf005;";
-			} else if (popularityRange < 0.6) {
-				popularityStars += "&#xf005;&#xf005;&#xf005;";
-			} else if (popularityRange < 0.8) {
-				popularityStars += "&#xf005;&#xf005;&#xf005;&#xf005;";
-			} else {
-				// Mr popular
-				popularityStars += "&#xf005;&#xf005;&#xf005;&#xf005;&#xf005;";
+				if (popularityRange < 0.2) {
+					// Mr lonely
+					popularityStars += "&#xf005;";
+				} else if (popularityRange < 0.4) {
+					popularityStars += "&#xf005;&#xf005;";
+				} else if (popularityRange < 0.6) {
+					popularityStars += "&#xf005;&#xf005;&#xf005;";
+				} else if (popularityRange < 0.8) {
+					popularityStars += "&#xf005;&#xf005;&#xf005;&#xf005;";
+				} else {
+					// Mr popular
+					popularityStars += "&#xf005;&#xf005;&#xf005;&#xf005;&#xf005;";
+				}
+
+
+				/*
+				0.0 -> 0.2 *
+				0.2 -> 0.4 **
+				0.4 -> 0.6 ***
+				0.6 -> 0.8 ****
+				0.8 -> 1.0 *****
+				*/
+
 			}
-
-
-			/*
-			0.0 -> 0.2 *
-			0.2 -> 0.4 **
-			0.4 -> 0.6 ***
-			0.6 -> 0.8 ****
-			0.8 -> 1.0 *****
-			*/
-
 		}
 
-			$("#user-pop span").html(popularityStars);
+		$("#user-pop span").html(popularityStars);
 
-			handleCard(true);
+		handleCard(true);
 
+		$.get('./php/log.php', { value: usr[0] }, function(data) {
+			console.log(data);
+		});
 
 	});
 }
+
+$("#selSocial").change(function() {
+	console.log($(this).val());
+	console.log($("#selSocial"));
+	var val = $(this).val();
+
+	if (val == "ig") {
+		document.getElementById("selSocial").selectedIndex = "0"; 
+	} else if (val == "tw") {
+		document.getElementById("selSocial").selectedIndex = "1"; 
+	} else if (val == "re") {
+		document.getElementById("selSocial").selectedIndex = "2"; 
+	}
+})

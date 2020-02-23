@@ -35,6 +35,11 @@ select#selSocial {
   font-family: 'Font Awesome 5 Brands', 'sans-serif';
 }
 
+select#selSocial option {
+  font-family: 'Font Awesome 5 Brands', 'Mont';
+  font-weight: 900;
+}
+
 #btnSearch {
   font-family: 'Font Awesome 5 Free', 'sans-serif';
 }
@@ -88,6 +93,12 @@ select#selSocial {
     text-align: center;
 
     border-radius: 8px;
+
+    -webkit-appearance: none;
+
+    /*width: 50px;*/
+
+    text-align: center;
 }
 
 #searchControls #btnSearch {
@@ -166,7 +177,7 @@ select#selSocial {
 
 	opacity: 100;
 
-	transition: margin-top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+	transition: margin-top 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 	#instaCard #user-body {
@@ -230,4 +241,5 @@ select#selSocial {
 
 #instaCard.hideCard {
 	margin-top: 80vh;
+	opacity: 0;
 }

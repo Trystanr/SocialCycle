@@ -5,22 +5,26 @@
 	<meta charset="utf-8">
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="Popularity">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	
 	<link href="css/brands.min.css" rel="stylesheet" />
 	<link href="css/solid.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/tablet.css">
+	<link rel="stylesheet" href="css/mobile.css">
 </head>
 
 <body>
 	
 	<div id="searchControls">
 		<select id="selSocial">
-			<option value="ig">&#xf16d;</option>
-			<option value="tw">&#xf099;</option>
-			<option value="re">&#xf281;</option>
+			<option value="ig" hidden>&#xf16d;</option>
 		</select>
 
-		<input type="text" name="txtUsername" id="txtUsername" placeholder="Enter Username" value="Trystanr" spellcheck="false">
+		<input type="text" name="txtUsername" id="txtUsername" placeholder="Enter Username" value="" spellcheck="false">
 		
 		<button id="btnSearch">&#xf061;</button>
 	</div>

@@ -1,0 +1,43 @@
+@media (max-width: 600px) {
+	body {
+		overflow-y: scroll;
+	}
+
+	#searchControls {
+		margin-top: 4vh;
+		width: 80vw;
+		margin-left: 0;
+	}
+
+	#searchControls input {
+		font-size: 24px;
+		margin-left: 0;
+
+		width: 50vw;
+	}
+
+	#searchControls #selSocial {
+		font-size: 24px;
+	}#searchControls #btnSearch {
+		font-size: 24px;
+	}
+
+	#instaCard {
+		width: 80vw;
+
+		margin-bottom: 10vh;
+
+		overflow: visible;
+	}
+
+	#instaCard.hideCard {
+		margin-top: 110vh;
+	}
+
+	#instaCard #user-body {
+		border-radius: 12px 12px 0 0;
+	}
+	#instaCard #user-footer {
+		border-radius: 0 0 12px 12px;
+	}
+}

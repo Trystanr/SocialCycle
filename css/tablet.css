@@ -1,0 +1,14 @@
+@media (max-width: 1400px) {
+
+	#searchControls {
+		margin-top: 4vh;
+	}
+
+	#instaCard {
+		width: 40vw;
+	}
+
+	#instaCard.hideCard {
+		margin-top: 110vh;
+	}
+}
