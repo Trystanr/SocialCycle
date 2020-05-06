@@ -1,5 +1,5 @@
 # SocialCycle
-##Smart Objects 301
+## Smart Objects 301
 
 View your popularity ranking by entering your instagram username.
 
