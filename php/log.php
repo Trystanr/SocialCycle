@@ -1,6 +1,7 @@
 <?php
 	header("Content-Type: application/json; charset=UTF-8");
 	$val = $_GET["value"];
+	$stars = $_GET["stars"];
 
 	include 'dbConnect.php';
 
@@ -12,7 +13,7 @@
 	}
 
 
-		$sql = "INSERT INTO `SocialCycleData` (`id`, `date`, `profile`) VALUES (NULL, CURRENT_TIMESTAMP, '$val')";
+		$sql = "INSERT INTO `SocialCycleData` (`id`, `date`, `profile`, `stars`) VALUES (NULL, CURRENT_TIMESTAMP, '$val', '$stars')";
 
 	if ($conn->query($sql) === TRUE) {
 	    echo "1";

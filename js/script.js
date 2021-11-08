@@ -63,6 +63,7 @@ function handleInstagram(usr) {
 		popularityVal = (usr[3] - usr[4]);
 		var popularityRange = popularityVal / usr[3];
 		var popularityStars = "";
+		var starCount = 0;
 
 		console.log(popularityVal);
 		console.log(popularityRange);
@@ -76,14 +77,19 @@ function handleInstagram(usr) {
 				if (popularityRange < 0.2) {
 					// Mr lonely
 					popularityStars += "&#xf005;";
+					starCount = 1;
 				} else if (popularityRange < 0.4) {
 					popularityStars += "&#xf005;&#xf005;";
+					starCount = 2;
 				} else if (popularityRange < 0.6) {
 					popularityStars += "&#xf005;&#xf005;&#xf005;";
+					starCount = 3;
 				} else if (popularityRange < 0.8) {
+					starCount = 4;
 					popularityStars += "&#xf005;&#xf005;&#xf005;&#xf005;";
 				} else {
 					// Mr popular
+					starCount = 5;
 					popularityStars += "&#xf005;&#xf005;&#xf005;&#xf005;&#xf005;";
 				}
 
@@ -103,7 +109,7 @@ function handleInstagram(usr) {
 
 		handleCard(true);
 
-		$.get('./php/log.php', { value: usr[0] }, function(data) {
+		$.get('./php/log.php', { value: usr[0], stars: starCount }, function(data) {
 			console.log(data);
 		});
 
